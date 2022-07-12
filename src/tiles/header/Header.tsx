@@ -1,12 +1,11 @@
 import React from "react";
-import "./App.css";
-import "./css/bootstrap.min.css";
-import "./css/jquery-ui.css";
-import "./css/font-awesome.min.css";
-import "./css/style.css";
-import "./css/widgets.css";
+import "../../css/bootstrap.min.css";
+import "../../css/jquery-ui.css";
+import "../../css/font-awesome.min.css";
+import "../../css/style.css";
+import "../../css/widgets.css";
 
-const Sidebar = () => {
+const Header = () => {
     return (
         <>
 	  <div
@@ -223,4 +222,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default Header;

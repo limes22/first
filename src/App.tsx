@@ -1,43 +1,59 @@
 import React from "react";
-import "./App.css";
 import "./css/bootstrap.min.css";
 import "./css/jquery-ui.css";
 import "./css/font-awesome.min.css";
 import "./css/style.css";
 import "./css/widgets.css";
-import Mainbar from "./Mainbar";
-import Sidebar from "./Sidebar";
-import Header from "./Header";
-import Slidbox from "./Slidebox";
+import Sidebar from "./tiles/slidebar/Sidebar";
+import Header from "./tiles/header/Header";
+import Slidbox from "./tiles/utils/Slidebox";
+import Charts from "./tiles/contents/chart/Charts";
 
 const App: React.FC = () => {
   return (
     <>
-      {/* <head>
-        <meta charSet="utf-8" />
-        <title>Dashboard - MetroKing</title>
-        <meta name="description" content="Your description" />
-        <meta name="keywords" content="Your,Keywords" />
-        <meta name="author" content="ResponsiveWebInc" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/jquery-ui.css" />
-        <link rel="stylesheet" href="css/jquery.gritter.css" />
-        <link href="css/font-awesome.min.css" rel="stylesheet" />
-        <link href="css/style.css" rel="stylesheet" />
-        <link href="css/widgets.css" rel="stylesheet" />
-        <link rel="shortcut icon" href="#" />
-      </head> */}
-      {/* <body> */}
       <Header />
       <div className="content">
         <Sidebar />
-        <Mainbar />
+        <Charts />
+        {/* <Dashboard /> */}
         <div className="clearfix"></div>
       </div>
       <Slidbox />
       {/* <!--/ Content ends --> */}
       {/* </body> */}
+      {/* <!-- Scroll to top --> */}
+      <span className="totop">
+        <a href="#">
+          <i className="fa fa-chevron-up"></i>
+        </a>
+      </span>
+      {/* <!-- Javascript files --> */}
+      {/* <!-- jQuery --> */}
+      <script src="js/jquery.js"></script>
+      {/* <!-- Bootstrap JS --> */}
+      <script src="js/bootstrap.min.js"></script>
+      {/* <!-- jQuery UI --> */}
+      <script src="js/jquery-ui.min.js"></script>
+      {/* <!-- jQuery Flot --> */}
+      <script src="js/excanvas.min.js"></script>
+      <script src="js/jquery.flot.js"></script>
+      <script src="js/jquery.flot.resize.js"></script>
+      <script src="js/jquery.flot.pie.js"></script>
+      <script src="js/jquery.flot.stack.js"></script>
+      {/* <!-- Sparklines --> */}
+      <script src="js/sparklines.js"></script>
+      {/* <!-- jQuery Gritter --> */}
+      <script src="js/jquery.gritter.min.js"></script>
+      {/* <!-- Respond JS for IE8 --> */}
+      <script src="js/respond.min.js"></script>
+      {/* <!-- HTML5 Support for IE --> */}
+      <script src="js/html5shiv.js"></script>
+      {/* <!-- Custom JS --> */}
+      <script src="js/custom.js"></script>
+
+      {/* <!-- Script for this page --> */}
+      <script src="js/sparkline-index.js"></script>
     </>
   );
 };
