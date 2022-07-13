@@ -10,24 +10,21 @@ import axios from "axios";
 import { data } from "jquery";
 
 const Charts = () => {
-  const [viewChart, setViewChart] = useState<any>({
-    id: "",
-    title: "",
-    body: "",
-  });
+  const [viewChart, setViewChart] = useState<any>([
+  ]);
 
   const getPosts = async () => {
     const res = await axios.get(
       "https://jsonplaceholder.typicode.com/posts?userId=1"
     );
-    setViewChart(res);
-    console.log(viewChart.data[1])
-    console.log(viewChart)
+    setViewChart(res.data);
   };
 
   useEffect(() => {
     getPosts();
   }, []);
+
+  console.log(viewChart);
 
   return (
     <>
