@@ -1,12 +1,34 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import "../../../css/bootstrap.min.css";
 import "../../../css/jquery-ui.css";
 import "../../../css/font-awesome.min.css";
 import "../../../css/style.css";
 import "../../../css/widgets.css";
 import MyChart from "./MyChart";
+import axios from "axios";
+import { data } from "jquery";
 
 const Charts = () => {
+  const [viewChart, setViewChart] = useState<any>({
+    id: "",
+    title: "",
+    body: "",
+  });
+
+  const getPosts = async () => {
+    const res = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts?userId=1"
+    );
+    setViewChart(res);
+    console.log(viewChart.data[1])
+    console.log(viewChart)
+  };
+
+  useEffect(() => {
+    getPosts();
+  }, []);
+
   return (
     <>
       {/* <!-- Main content starts --!> */}
@@ -41,8 +63,7 @@ const Charts = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
-                  <MyChart />
-                  <MyChart />
+                  <MyChart viewChart={viewChart} />
                 </div>
               </div>
             </div>
@@ -53,6 +74,7 @@ const Charts = () => {
         <div className="clearfix"></div>
       </div>
       {/* <!--/ Content ends --!> */}
+      <script src="../../../js/jquery.flot.pie.js"></script>
     </>
   );
 };
