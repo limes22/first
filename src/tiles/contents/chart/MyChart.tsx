@@ -28,14 +28,16 @@ const MyChart = ({ viewChart }: MyChartProps) => {
 
 <div className="widget-content">
 										<div className="table-responsive">
-                      {viewChart.map((element: any, idx: number)=> (
-                        <h2>
+                      
 											<table className="table table-bordered ">
-												{/* <thead>
+												<thead>
 													<tr>
-                          {element.id}
+                          <td>id</td>
+                          <td>title</td>
+                          <td>body</td>
 													</tr>
-												</thead> */}
+												</thead>
+                        {viewChart.map((element: any, idx: number)=> (
 												<tbody>
 													<tr>
 													  <td>{element.id}</td>
@@ -43,9 +45,9 @@ const MyChart = ({ viewChart }: MyChartProps) => {
 													  <td>{element.body}</td>
 													</tr>                                                                 
 												</tbody>
-											</table>
-                        </h2>
-                      ))}
+                        ))}
+											</table>                   
+                      
 
 										</div>
 									</div>
