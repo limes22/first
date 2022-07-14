@@ -8,8 +8,6 @@ import MyChart from "./MyChart";
 import { data } from "jquery";
 
 const Charts = () => {
-  
-
   return (
     <>
       {/* <!-- Main content starts --!> */}

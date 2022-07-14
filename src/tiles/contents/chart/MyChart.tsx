@@ -7,10 +7,8 @@ import "../../../css/style.css";
 import "../../../css/widgets.css";
 import axios from "axios";
 
-
 const MyChart = () => {
-  const [viewChart, setViewChart] = useState<any>([
-  ]);
+  const [viewChart, setViewChart] = useState<any>([]);
 
   async function getPosts() {
     const res = await axios.get(
@@ -29,20 +27,21 @@ const MyChart = () => {
       {/* <!-- Pie chart starts --> */}
 
       <div className="widget wviolet">
-
         <div className="widget-head">
           <div className="pull-left">Pie Chart</div>
           <div className="widget-icons pull-right">
-            <a href="#" className="wminimize"><i className="fa fa-chevron-up"></i></a>
-            <a href="#" className="wclose"><i className="fa fa-times"></i></a>
+            <a href="#" className="wminimize">
+              <i className="fa fa-chevron-up"></i>
+            </a>
+            <a href="#" className="wclose">
+              <i className="fa fa-times"></i>
+            </a>
           </div>
           <div className="clearfix"></div>
         </div>
 
-
         <div className="widget-content">
           <div className="table-responsive">
-
             <table className="table table-bordered ">
               <thead>
                 <tr>
@@ -61,14 +60,12 @@ const MyChart = () => {
                 </tbody>
               ))}
             </table>
-
-
           </div>
         </div>
       </div>
       {/* <!-- Pie chart ends --> */}
     </>
   );
-}
+};
 
 export default MyChart;
