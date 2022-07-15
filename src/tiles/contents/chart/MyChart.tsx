@@ -21,6 +21,10 @@ const MyChart = () => {
     getPosts();
   }, []);
 
+  const fruits = { 'banana': 'banana', 'A': 'A', 'C': 'C' };
+  console.log(Object.keys(fruits))
+
+
   console.log(viewChart);
   return (
     <>
@@ -45,20 +49,21 @@ const MyChart = () => {
             <table className="table table-bordered ">
               <thead>
                 <tr>
-                  <td>id</td>
-                  <td>title</td>
-                  <td>body</td>
+                  <th>id</th>
+                  <th>title</th>
+                  <th>body</th>
                 </tr>
+                <hr></hr>
               </thead>
-              {viewChart.map((element: any, idx: number) => (
-                <tbody>
+              <tbody>
+                {viewChart.map((element: any, idx: number) => (
                   <tr>
                     <td>{element.id}</td>
                     <td>{element.title}</td>
                     <td>{element.body}</td>
                   </tr>
-                </tbody>
-              ))}
+                ))}
+              </tbody>
             </table>
           </div>
         </div>

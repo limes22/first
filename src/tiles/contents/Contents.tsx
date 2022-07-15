@@ -335,9 +335,9 @@ const Dashboard = () => {
                           <div
                             className="progress-bar progress-bar-success"
                             role="progressbar"
-                            aria-valuenow="100"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
+                            aria-valuenow={100}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
                           >
                             <span className="sr-only">100% Complete</span>
                           </div>
@@ -496,9 +496,9 @@ const Dashboard = () => {
                           <div
                             className="progress-bar progress-bar-info"
                             role="progressbar"
-                            aria-valuenow="100"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
+                            aria-valuenow={100}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
                           >
                             <span className="sr-only">80% Complete</span>
                           </div>
@@ -530,9 +530,9 @@ const Dashboard = () => {
                           <div
                             className="progress-bar progress-bar-warning"
                             role="progressbar"
-                            aria-valuenow="100"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
+                            aria-valuenow={100}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
                           >
                             <span className="sr-only">90% Complete</span>
                           </div>
@@ -564,9 +564,9 @@ const Dashboard = () => {
                           <div
                             className="progress-bar progress-bar-danger"
                             role="progressbar"
-                            aria-valuenow="100"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
+                            aria-valuenow={100}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
                           >
                             <span className="sr-only">70% Complete</span>
                           </div>

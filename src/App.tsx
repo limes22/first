@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import "./css/bootstrap.min.css";
 import "./css/jquery-ui.css";
@@ -8,21 +9,28 @@ import Sidebar from "./tiles/slidebar/Sidebar";
 import Header from "./tiles/header/Header";
 import Slidbox from "./tiles/utils/Slidebox";
 import Charts from "./tiles/contents/chart/Charts";
+import Dashboard from "./tiles/contents/Contents";
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
+      <Sidebar />
       <div className="content">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Dashboard />}></Route>
+            <Route path="/Charts" element={<Charts />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
+      {/* <div className="content">
         <Sidebar />
         <Charts />
-        {/* <Dashboard /> */}
+        <Dashboard />
         <div className="clearfix"></div>
-      </div>
+      </div> */}
       <Slidbox />
-      {/* <!--/ Content ends --> */}
-      {/* </body> */}
-      {/* <!-- Scroll to top --> */}
       <span className="totop">
         <a href="#">
           <i className="fa fa-chevron-up"></i>

@@ -30,7 +30,7 @@ const Sidebar = () => {
             {/* <!-- Use the class nred, ngreen, nblue, nlightblue, nviolet or norange to add background color. You need to use this in <li> tag. --> */}
 
             <li className="nred current">
-              <a href="index.html">
+              <a href="/">
                 <i className="fa fa-desktop"></i> Dashboard
               </a>
             </li>
@@ -54,7 +54,7 @@ const Sidebar = () => {
               </ul>
             </li>
             <li className="ngreen">
-              <a href="charts.html">
+              <a href="/Charts">
                 <i className="fa fa-bar-chart-o"></i> Charts
               </a>
             </li>
