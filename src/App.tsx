@@ -10,6 +10,8 @@ import Header from "./tiles/header/Header";
 import Slidbox from "./tiles/utils/Slidebox";
 import Charts from "./tiles/contents/chart/Charts";
 import Dashboard from "./tiles/contents/Contents";
+import UiElements from "./tiles/contents/ui/UiElements";
+import Forms from "./tiles/contents/forms/Forms";
 
 const App: React.FC = () => {
   return (
@@ -21,6 +23,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Dashboard />}></Route>
             <Route path="/Charts" element={<Charts />}></Route>
+            <Route path="/UiElement" element={<UiElements />}></Route>
+            <Route path="/Forms" element={<Forms />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

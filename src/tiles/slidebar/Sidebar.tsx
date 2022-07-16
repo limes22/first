@@ -59,7 +59,7 @@ const Sidebar = () => {
               </a>
             </li>
             <li className="norange">
-              <a href="ui.html">
+              <a href="/UiElement">
                 <i className="fa fa-sitemap"></i> UI Elements
               </a>
             </li>
@@ -123,7 +123,7 @@ const Sidebar = () => {
               </ul>
             </li>
             <li className="nred">
-              <a href="forms.html">
+              <a href="/Forms">
                 <i className="fa fa-list"></i> Forms
               </a>
             </li>
