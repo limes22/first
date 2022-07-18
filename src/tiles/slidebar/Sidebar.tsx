@@ -4,8 +4,10 @@ import "../../css/jquery-ui.css";
 import "../../css/font-awesome.min.css";
 import "../../css/style.css";
 import "../../css/widgets.css";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  let navigate = useNavigate();
   return (
     <>
       {/* <!-- Sidebar --> */}
@@ -30,7 +32,7 @@ const Sidebar = () => {
             {/* <!-- Use the class nred, ngreen, nblue, nlightblue, nviolet or norange to add background color. You need to use this in <li> tag. --> */}
 
             <li className="nred current">
-              <a href="/">
+              <a onClick={()=>navigate("/")}>
                 <i className="fa fa-desktop"></i> Dashboard
               </a>
             </li>
@@ -54,12 +56,12 @@ const Sidebar = () => {
               </ul>
             </li>
             <li className="ngreen">
-              <a href="/Charts">
+              <a onClick={()=>navigate("/charts/2")}>
                 <i className="fa fa-bar-chart-o"></i> Charts
               </a>
             </li>
             <li className="norange">
-              <a href="/UiElement">
+              <a onClick={()=>navigate("/UiElement")}>
                 <i className="fa fa-sitemap"></i> UI Elements
               </a>
             </li>
@@ -123,7 +125,7 @@ const Sidebar = () => {
               </ul>
             </li>
             <li className="nred">
-              <a href="/Forms">
+              <a onClick={()=>navigate("/Forms")}>
                 <i className="fa fa-list"></i> Forms
               </a>
             </li>

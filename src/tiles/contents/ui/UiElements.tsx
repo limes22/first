@@ -6,6 +6,7 @@ import "../../../css/style.css";
 import "../../../css/widgets.css";
 
 const UiElements = () => {
+  // some verify logic
   return (
     <>
       <div className="mainbar">

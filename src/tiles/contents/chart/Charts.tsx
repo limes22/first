@@ -5,8 +5,13 @@ import "../../../css/font-awesome.min.css";
 import "../../../css/style.css";
 import "../../../css/widgets.css";
 import MyChart from "./MyChart";
+import { useLocation, useParams } from "react-router-dom";
 
 const Charts = () => {
+  const params = useParams();
+  console.log(params);
+  let location = useLocation();
+	console.log(location);
   return (
     <>
       {/* <!-- Main content starts --!> */}
