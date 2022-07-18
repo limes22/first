@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "../../css/bootstrap.min.css";
 import "../../css/jquery-ui.css";
 import "../../css/font-awesome.min.css";
@@ -6,6 +7,8 @@ import "../../css/style.css";
 import "../../css/widgets.css";
 
 const Sidebar = () => {
+  const [current, setCurrent] = useState<any>('');
+
   return (
     <>
       {/* <!-- Sidebar --> */}
@@ -29,14 +32,15 @@ const Sidebar = () => {
           <ul className="navi">
             {/* <!-- Use the class nred, ngreen, nblue, nlightblue, nviolet or norange to add background color. You need to use this in <li> tag. --> */}
 
-            <li className="nred current">
-              <a href="/">
+            <li className={current} onClick={() => setCurrent("nred current")} >
+              <a href="/" >
                 <i className="fa fa-desktop"></i> Dashboard
               </a>
             </li>
             {/* <!-- Menu with sub menu --> */}
             <li className="has_submenu nlightblue">
               <a href="#">
+
                 {/* <!-- Menu name with icon --> */}
                 <i className="fa fa-th"></i> Widgets
                 {/* <!-- Icon for dropdown --> */}
@@ -54,12 +58,12 @@ const Sidebar = () => {
               </ul>
             </li>
             <li className="ngreen">
-              <a href="/Charts">
+              <a href="/charts/2">
                 <i className="fa fa-bar-chart-o"></i> Charts
               </a>
             </li>
             <li className="norange">
-              <a href="/UiElement">
+              <a href="/uielement" >
                 <i className="fa fa-sitemap"></i> UI Elements
               </a>
             </li>
@@ -123,7 +127,7 @@ const Sidebar = () => {
               </ul>
             </li>
             <li className="nred">
-              <a href="/Forms">
+              <a href="/forms">
                 <i className="fa fa-list"></i> Forms
               </a>
             </li>

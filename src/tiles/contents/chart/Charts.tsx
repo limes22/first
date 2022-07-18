@@ -7,6 +7,7 @@ import "../../../css/widgets.css";
 import MyChart from "./MyChart";
 
 const Charts = () => {
+  // console.log(match);
   return (
     <>
       {/* <!-- Main content starts --!> */}
