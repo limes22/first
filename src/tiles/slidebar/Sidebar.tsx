@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "../../css/bootstrap.min.css";
 import "../../css/jquery-ui.css";
 import "../../css/font-awesome.min.css";
 import "../../css/style.css";
 import "../../css/widgets.css";
+import { useNavigate } from "react-router";
 
 const Sidebar = () => {
-  const [current, setCurrent] = useState<any>('');
-
+  const [current, setCurrent] = useState("nred");
+  console.log(current);
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    console.log("now im mount");
+    return () => console.log("now im unmount");
+  }, [])
+  
+  useEffect(() => {
+    console.log("now im update");
+  })
+  
   return (
     <>
       {/* <!-- Sidebar --> */}
@@ -32,10 +44,13 @@ const Sidebar = () => {
           <ul className="navi">
             {/* <!-- Use the class nred, ngreen, nblue, nlightblue, nviolet or norange to add background color. You need to use this in <li> tag. --> */}
 
-            <li className={current} onClick={() => setCurrent("nred current")} >
-              <a href="/" >
-                <i className="fa fa-desktop"></i> Dashboard
-              </a>
+            <li className={current} >
+                <a onClick={()=> {
+                  setCurrent("nred current");
+                  navigate("/");
+                }}>
+                  <i className="fa fa-desktop"></i> Dashboard
+                </a>
             </li>
             {/* <!-- Menu with sub menu --> */}
             <li className="has_submenu nlightblue">

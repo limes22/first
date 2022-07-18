@@ -20,21 +20,13 @@ const App: React.FC = () => {
       <Header />
       <Sidebar />
       <div className="content">
-        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Dashboard />}></Route>
             <Route path="/charts/:id" element={<Charts />}></Route>
             <Route path="/uielement" element={<UiElements />}></Route>
             <Route path="/forms" element={<Forms />}></Route>
           </Routes>
-        </BrowserRouter>
       </div>
-      {/* <div className="content">
-        <Sidebar />
-        <Charts />
-        <Dashboard />
-        <div className="clearfix"></div>
-      </div> */}
       <Slidbox />
       <span className="totop">
         <a href="#">
