@@ -4,8 +4,12 @@ import "../../../css/jquery-ui.css";
 import "../../../css/font-awesome.min.css";
 import "../../../css/style.css";
 import "../../../css/widgets.css";
+import {useDispatch} from "react-redux";
+import {getUISuccess} from "../ui/slice";
 
 const Forms = () => {
+  const dispatch = useDispatch();
+  dispatch(getUISuccess({name: "pjh", gender: "male"}))
   return (
     <>
       <div className="mainbar">

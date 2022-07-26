@@ -4,9 +4,12 @@ import "../../../css/jquery-ui.css";
 import "../../../css/font-awesome.min.css";
 import "../../../css/style.css";
 import "../../../css/widgets.css";
+import {useSelector} from "react-redux";
 
 const UiElements = () => {
   // some verify logic
+  const uiState = useSelector((state: any) => state.ui);
+  console.log(uiState);
   return (
     <>
       <div className="mainbar">
