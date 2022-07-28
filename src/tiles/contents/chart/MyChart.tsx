@@ -6,26 +6,26 @@ import "../../../css/font-awesome.min.css";
 import "../../../css/style.css";
 import "../../../css/widgets.css";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getChart } from "../chart/slice";
 
 const MyChart = () => {
-  const [viewChart, setViewChart] = useState<any>([]);
+  // const [viewChart, setViewChart] = useState<any>([]);
+  const dispatch = useDispatch();
+  const chartState = useSelector((state: any) => state.chart)
 
   async function getPosts() {
     const res = await axios.get(
       "https://jsonplaceholder.typicode.com/posts?userId=1"
     );
-    setViewChart(res.data);
+    dispatch(getChart((res.data)));
   }
 
   useEffect(() => {
     getPosts();
   }, []);
 
-  const fruits = { 'banana': 'banana', 'A': 'A', 'C': 'C' };
-  console.log(Object.keys(fruits))
-
-
-  console.log(viewChart);
+  console.log(chartState);
   return (
     <>
       {/* <!-- Pie chart starts --> */}
@@ -56,7 +56,7 @@ const MyChart = () => {
                 <hr></hr>
               </thead>
               <tbody>
-                {viewChart.map((element: any, idx: number) => (
+                {chartState.data.map((element: any, idx: number) => (
                   <tr>
                     <td>{element.id}</td>
                     <td>{element.title}</td>
