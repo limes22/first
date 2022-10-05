@@ -12,6 +12,7 @@ import Charts from "./tiles/contents/chart/Charts";
 import Dashboard from "./tiles/contents/Contents";
 import UiElements from "./tiles/contents/ui/UiElements";
 import Forms from "./tiles/contents/forms/Forms";
+import Polling from "./tiles/contents/polling/Polling";
 
 const App: React.FC = () => {
   return (
@@ -19,12 +20,13 @@ const App: React.FC = () => {
       <Header />
       <Sidebar />
       <div className="content">
-          <Routes>
-            <Route path="/" element={<Dashboard />}></Route>
-            <Route path="/Charts/:id" element={<Charts />}></Route>
-            <Route path="/UiElement" element={<UiElements />}></Route>
-            <Route path="/Forms" element={<Forms />}></Route>
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Dashboard />}></Route>
+          <Route path="/Charts/:id" element={<Charts />}></Route>
+          <Route path="/UiElement" element={<UiElements />}></Route>
+          <Route path="/Forms" element={<Forms />}></Route>
+          <Route path="/Polling" element={<Polling />}></Route>
+        </Routes>
       </div>
       <Slidbox />
       <span className="totop">

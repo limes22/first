@@ -10,25 +10,25 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { pathname } = location;
-  const [highlights, setHighlights] = React.useState({id: 'dashboard'});
+  const [highlights, setHighlights] = React.useState({ id: 'dashboard' });
   // (0) / (1) /charts (2) /UiElement (3) /Forms
   useEffect(() => {
     if (pathname) {
       if (pathname === "/") {
-        setHighlights({id: 'dashboard'});
+        setHighlights({ id: 'dashboard' });
       }
       if (pathname.includes("/charts")) {
-        setHighlights({id: 'charts'});
+        setHighlights({ id: 'charts' });
       }
       if (pathname.includes("/UiElement")) {
-        setHighlights({id: 'UiElement'});
+        setHighlights({ id: 'UiElement' });
       }
       if (pathname.includes("/Forms")) {
-        setHighlights({id: 'Forms'});
+        setHighlights({ id: 'Forms' });
       }
     }
   }, [pathname]);
-  
+
   const isHighLights = (id: string, color: string) => {
     if (highlights.id === id) {
       return color + " current";
@@ -60,7 +60,7 @@ const Sidebar = () => {
 
             {/* <li className="nred current"> */}
             <li className={isHighLights("dashboard", "nred")}>
-              <a onClick={()=>navigate("/")}>
+              <a onClick={() => navigate("/")}>
                 <i className="fa fa-desktop"></i> Dashboard
               </a>
             </li>
@@ -85,13 +85,13 @@ const Sidebar = () => {
             </li>
             {/* <li className="ngreen"> */}
             <li className={isHighLights("charts", "ngreen")}>
-              <a onClick={()=>navigate("/charts/2")}>
+              <a onClick={() => navigate("/charts/2")}>
                 <i className="fa fa-bar-chart-o"></i> Charts
               </a>
             </li>
             {/* <li className="norange"> */}
             <li className={isHighLights("UiElement", "norange")}>
-              <a onClick={()=>navigate("/UiElement")}>
+              <a onClick={() => navigate("/UiElement")}>
                 <i className="fa fa-sitemap"></i> UI Elements
               </a>
             </li>
@@ -156,13 +156,18 @@ const Sidebar = () => {
             </li>
             {/* <li className="nred"> */}
             <li className={isHighLights("Forms", "nred")}>
-              <a onClick={()=>navigate("/Forms")}>
+              <a onClick={() => navigate("/Forms")}>
                 <i className="fa fa-list"></i> Forms
               </a>
             </li>
             <li className="nlightblue">
               <a href="tables.html">
                 <i className="fa fa-table"></i> Tables
+              </a>
+            </li>
+            <li className="nlightblue">
+              <a onClick={() => navigate("/Polling")}>
+                <i className="fa fa-table"></i> Polling
               </a>
             </li>
           </ul>
